@@ -1,0 +1,278 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+header nav a {
+  margin: 0 12px;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #1d4ed8;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #1d4ed8;
+}
+
+/* Hero */
+.hero {
+  background-image: url('your-keyboard-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0,0,0,0.5);
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-overlay a {
+  background-color: #1d4ed8;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-overlay a:hover {
+  background-color: #2563eb;
+}
+
+/* Sekcja "O nas" */
+.section {
+  padding: 60px 16px;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto 16px auto;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Opinie */
+.reviews {
+  background-color: #fff;
+  padding: 60px 16px;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.review-card h3 {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.stars {
+  color: #fbbf24; /* Золотой */
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #ccc;
+  
+  text-align: center;
+  font-size: 14px;
+}
+
+.products {
+  background-color: #ccc;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 8px 0 4px;
+}
+
+.product-card p {
+  margin: 4px 0;
+  color: #666;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+.product-card .stars {
+  color: #fbbf24;
+  margin-top: 6px;
+}
+
+.product-card .rating {
+  font-size: 14px;
+  color: #555;
+  margin-left: 8px;
+}
+
+/* ✅ Адаптация */
+@media (max-width: 768px) {
+  .products h2 {
+    font-size: 24px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #2b2b2b;
+  border-top: 4px solid #aaa;
+}
+
+.column {
+  flex: 1;
+  margin: 0 15px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+a {
+  color: #3399ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+span {
+  color: #3399ff;
+}
+
+.icon {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
