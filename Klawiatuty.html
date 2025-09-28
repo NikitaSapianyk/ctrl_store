@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CtrlStore</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<title>Document</title>
+<link rel="stylesheet" href="./styles/klawiatury.css" />
+</head>
+
+<body>
+
+
+  <header class="bg-white shadow-md flex justify-between items-center px-6 py-4">
+    <div class="text-2xl font-bold">
+      <span class="text-gray-700">Ctrl</span><span class="text-blue-500">Store</span>
+    </div>
+    <nav class="space-x-6 hidden md:block">
+      <a href="./myszki.html" class="hover:text-blue-500">Myszki</a>
+      <a href="./Klawiatuty.html" class="hover:text-blue-500" style="color: rgb(59, 130, 246);">Klawiatury</a>
+      <a href="#" class="hover:text-blue-500">Kontakty</a>
+    </nav>
+    <div class="flex space-x-2">
+      <img src="https://flagcdn.com/w40/pl.png" alt="PL" class="w-6 h-4" style="
+    border: 1px solid #1d4ed8;
+    /* border-radius:20px; */
+" border:1px="" solid="">
+      <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="w-6 h-4">
+    </div>
+  </header>
+
+  <section class="filter">
+
+    <div class="main-wrapper">
+      <aside class="sidebar">
+
+        <div class="filter-group">
+          <h4>▸ MARKA</h4>
+          <label><input type="checkbox" value="AJAZZ" data-type="brand"> AJAZZ</label><br>
+          <label><input type="checkbox" value="LOGITECH" data-type="brand"> LOGITECH</label><br>
+          <label><input type="checkbox" value="ATACK SHARK" data-type="brand"> ATACK SHARK</label><br>
+          <label><input type="checkbox" value="Ryzen" data-type="brand"> Ryzen</label><br>
+          <label><input type="checkbox" value="CtrlStore" data-type="brand"> CtrlStore</label><br>
+        </div>
+
+
+        <div class="filter-group">
+          <h4>▸ KOMUNIKACJA Z KOMPUTEREM</h4>
+          <label><input type="checkbox"> Przewodowa</label><br>
+          <label><input type="checkbox"> Bezprzewodowa (328)</label><br>
+        </div>
+
+
+        <div class="filter-group">
+          <h4>▸ KOLOR DOMINUJĄCY</h4>
+          <label><input type="checkbox" value="color-white" data-type="color"> Biały </label><br>
+          <label><input type="checkbox" value="color-blue" data-type="color"> Niebieski</label><br>
+          <label><input type="checkbox" value="color-black" data-type="color"> Czarny</label><br>
+          <label><input type="checkbox" value="color-red" data-type="color"> Czerwony</label><br>
+
+        </div>
+
+
+
+        <button class="filter-button">
+          <p class="zastosuj">ZASTOSUJ FILTRY</p>
+        </button>
+      </aside>
+
+    </div>
+  </section>
+
+
+
+  <!-- Продукты -->
+  <section class="myszki_kategri">
+    <div class="product-card" data-brand="LOGITECH" data-color="color-black">
+      <img src="./photo/Klawiatura-LOGITECH-G213-Prodigy-skos.jpg" alt="Logitech G213" style="width: 200px;">
+      <h3>Logitech G213 Prodigy</h3>
+      <p class="price">229,99zł</p>
+      <div class="stars">★★★★☆</div>
+      <span class="rating">4,6</span>
+    </div>
+
+
+    <div class="product-card" data-brand="LOGITECH" data-color="color-black">
+      <img src="./photo/Klawiatura-LOGITECH-G515-Lightspeed-TKL-Czarny-skos-lewy.jpg" alt="Logitech G915"
+        style="width: 200px; padding-bottom: 67.5px;     padding-top: 67.5px;">
+      <h3>Logitech G915 TKL</h3>
+      <p class="price">899,99zł</p>
+      <div class="stars">★★★★★</div>
+      <span class="rating">4,9</span>
+    </div>
+
+
+    <div class="product-card" data-brand="AJAZZ" data-color="color-white">
+      <img src="./photo/61hq5mY8-eL._AC_SX679_.jpg" alt="Ajazz AK33" style="width: 200px;     padding-top: 36px;
+    padding-bottom: 36px;">
+      <h3>Ajazz AK33</h3>
+      <p class="price">199,99zł</p>
+      <div class="stars">★★★☆☆</div>
+      <span class="rating">4,2</span>
+    </div>
+
+
+    <div class="product-card" data-brand="AJAZZ" data-color="color-black">
+      <img src="./photo/61rEfzmo7KL._AC_SX679_.jpg" alt="Ajazz AK510" style="width: 200px;">
+      <h3>Ajazz AK510</h3>
+      <p class="price">289,99zł</p>
+      <div class="stars">★★★★☆</div>
+      <span class="rating">4,3</span>
+    </div>
+
+
+    <div class="product-card" data-brand="ATACK SHARK" data-color="color-black">
+      <img src="./photo/ak820max-4.jpg" alt="Attack Shark X11" style="width: 200px; padding-top: 22.5px;
+    padding-bottom: 22.5px;">
+      <h3>Attack Shark X11</h3>
+      <p class="price">349,99zł</p>
+      <div class="stars">★★★★★</div>
+      <span class="rating">4,8</span>
+    </div>
+
+
+   
+  </section>
+
+
+
+
+
+
+
+  <script>
+    const checkboxes = document.querySelectorAll('.filter-group input[type="checkbox"]');
+    const productCards = document.querySelectorAll('.product-card');
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        const selectedBrands = Array.from(document.querySelectorAll('input[data-type="brand"]:checked')).map(cb => cb.value);
+        const selectedColors = Array.from(document.querySelectorAll('input[data-type="color"]:checked')).map(cb => cb.value);
+
+        productCards.forEach(card => {
+          const brand = card.dataset.brand;
+          const color = card.dataset.color;
+
+          const brandMatch = selectedBrands.length === 0 || selectedBrands.includes(brand);
+          const colorMatch = selectedColors.length === 0 || selectedColors.includes(color);
+
+          card.style.display = (brandMatch && colorMatch) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
